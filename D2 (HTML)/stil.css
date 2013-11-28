@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	padding: 0;
+	margin: 20px auto;
+	border: 0;
+	border-spacing: 0;
+}
+
+tr.normal:nth-child(3n) {
+	background-color: #009933;
+}
+
+tr.normal:nth-child(3n+1) {
+	background-color: #006699;
+}
+
+tr.normal:nth-child(3n+2) {
+	background-color: #663366;
+}
+
+td {
+	text-align: center;
+	min-width: 120px;
+	padding: 0 15px 0 15px;
+	margin: 0;
+	border: 0;
+}
+
+tr.normal td {
+	padding: 15px;
+}
+
+tr.normal:hover {
+	background-color: lime;
+	font-weight: bold;
+}
+
+
+tr.head td span {
+	color: green;
+	font-size: 1.2em;
+}
+
+tr.normal td img {
+	height: 70px;
+	width: 100px;
+	border-radius: 5px;
+	opacity: 0.5;
+}
+
+tr.normal td:hover span {
+	color: blue;
+}
+
+tr.normal:hover img {
+	opacity: 1;
+}
+
+table a, table a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+table a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+tr.normal:hover a {
+	color: red;
+}

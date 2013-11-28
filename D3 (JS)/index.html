@@ -1,0 +1,124 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Informatii angajati</title>
+	<link rel = "stylesheet" type = "text/css" href = "stil.css">
+	<script type="text/javascript">
+		
+		function save_info() {
+			var txt = document.getElementById('nume').value + " ; ";
+			txt += document.getElementById('prenume').value + " ; ";
+			txt += document.getElementById('varsta').value + " ; ";
+			txt += document.getElementById('angajare').value + " ; ";
+			txt += document.getElementById('departament').value + " ; ";
+			txt += document.getElementById('link').value + " ; ";
+			txt += document.getElementById('poza').value + " ; ";
+			alert(txt);
+		}
+		
+		
+		window.onload = function()
+		{
+		var tabel = document.getElementById('tabel');
+		
+		function angajat(nume,prenume,varsta,angajare,dep,link,poza){
+				this.nume = nume;
+				this.prenume = prenume;
+				this.varsta = varsta;
+				this.angajare = angajare;
+				this.dep = dep;
+				this.link = link;
+				this.poza = poza;
+		}
+
+		
+		var angajati = new Array();
+		angajati[0] = new angajat("Doe","John","Fara numar","1 BC","Missing persons","#","poza.png");
+		angajati[1] = new angajat("Grigoriu","Andrei","26","29/01/2009","Juridic","#","poza.png");
+		angajati[2] = new angajat("Cristoiu","Mihai","30","14/08/2008","Vanzari","#","poza.png");
+		angajati[3] = new angajat("Radulescu","Andrei","22","04/06/2013","IT","#","poza.png");
+		angajati[4] = new angajat("Popa","George","34","19/02/2010","Vanzari","#","poza.png");
+	
+		function populeaza(ang){
+			
+			var mare_mesaj = "<tr class=\"normal\">" +
+				"<td><span>" + ang.nume + "</span></td>" +
+				"<td><span>" + ang.prenume + "</span></td>" +
+				"<td><span>" + ang.varsta + "</span></td>" +
+				"<td><span>" + ang.angajare + "</span></td>" +
+				"<td><span>" + ang.dep + "</span></td>" +
+				"<td><span><a href=\"" + ang.link + "\" alt = \"FB/LI\" >Link</a></span></td>" +
+				"<td><span><img src=\"" + ang.poza + "\"></span></td>" +
+				"<td><span></span></td>" +
+				"</tr>" ;
+			return mare_mesaj;
+		}
+
+
+		function populare_in_masa() {
+				var head = document.getElementsByClassName('head');
+				var mare_string = head[0].outerHTML;
+				mare_string += head[1].outerHTML;
+				
+				var i = 0;
+				while (angajati[i]) {
+					mare_string += populeaza(angajati[i]);
+					i++;
+				}
+				
+				tabel.innerHTML = mare_string;
+		}
+		
+		function update() {
+			var i = 0;
+			while (angajati[i+1]) { i++; }
+			var rand = tabel.insertRow(-1);
+			rand.outerHTML = populeaza(angajati[i]);
+			rand.class = "normal";
+		
+		}
+		
+		
+		function new_row() {
+			var rand = tabel.insertRow(-1);
+			var mare_rand = '<tr class = "normal">' +
+					'<td><span><input type="text" id = "nume" /></span></td>' +
+					'<td><span><input type="text" id = "prenume" /></span></td>' +
+					'<td><span><input type="text" id = "varsta" /></span></td>' +
+					'<td><span><input type="date" id = "angajare" /></span></td>' +
+					'<td><span><input type="text" id = "departament" /></span></td>' +
+					'<td><span><input type="url" id = "link" /></span></td>' +
+					'<td><span><input type="file" id = "poza" /></span></td>' +
+					'<td><span><input type="button" value="Save" onclick="save_info()" />&nbsp;&nbsp;&nbsp;<input type="button" value="Cancel" /></span></td>' +
+					'</tr>';
+			rand.outerHTML = mare_rand;
+			rand.class = "normal";
+		}
+		
+		
+		populare_in_masa();
+		new_row();
+		};
+		
+	</script>
+</script>
+</head>
+
+<body>
+	<table id ="tabel" >
+		<tr class = "head">
+			<td colspan = "8"><span>Tabel angajati</span></td>
+		</tr>
+		<tr class = "head">
+			<td><span>Nume</span></td>
+			<td><span>Prenume</span></td>
+			<td><span>Varsta</span></td>
+			<td><span>Data angajarii</span></td>
+			<td><span>Departament</span></td>
+			<td><span>FB/LI</span></td>
+			<td><span>Poza</span></td>
+			<td><span></span></td>
+		</tr>		
+</table>
+</body>
+</html>

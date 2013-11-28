@@ -1,0 +1,40 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Tabel angajati</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body id="body">
+		<table id="tabel">
+		<thead>
+			<tr>
+				<th colspan="8"><span>Tabel angajati</span></th>
+			</tr>
+			<tr>
+					<th><span>Nume</span></th>
+					<th><span>Prenume</span></th>
+					<th><span>Varsta</span></th>
+					<th><span>Data angajarii</span></th>
+					<th><span>Departament</span></th>
+					<th><span>Link</span></th>
+					<th><span>Poza</span></th>
+					<th><span></span></th>
+			</tr>
+		</thead>
+		<tbody id="lista">
+			<tr><td colspan="7"></td><td><input type="button" onclick="new_ang()" value="Add new" /></td></tr>	
+		</tbody>
+		</table>
+		<script type="text/javascript">
+			window.onload = function(){
+			populareTabel();
+			
+			var buton = '<input id="local_size" type="button" value="'+ localStorage.angajati.length + 'B stored" onclick="empty_local()" />';
+			var aux = '<div style="text-align:center">' + buton + '</span>';
+			document.getElementById('body').innerHTML += aux;
+			}
+		</script
+</body>
+</html>

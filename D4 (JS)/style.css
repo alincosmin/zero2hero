@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table#tabel {
+	padding: 0;
+	margin: 20px auto;
+	border: 0;
+	border-spacing: 0;
+}
+
+#tabel tbody tr:nth-child(3n) {
+	background-color: #009933;
+}
+
+#tabel tbody tr:nth-child(3n+1) {
+	background-color: #006699;
+}
+
+#tabel tbody tr:nth-child(3n+2) {
+	background-color: #663366;
+}
+
+#tabel td, #tabel th{
+	text-align: center;
+	min-width: 120px;
+	padding: 0 15px 0 15px;
+	margin: 0;
+	border: 0;
+}
+
+#tabel tbody td {
+	padding: 15px;
+}
+
+#tabel tbody tr:hover {
+	background-color: lime;
+	font-weight: bold;
+}
+
+
+#tabel th span {
+	color: green;
+	font-size: 1.2em;
+}
+
+#tabel tbody td img {
+	height: 70px;
+	width: 100px;
+	border-radius: 5px;
+	opacity: 0.5;
+}
+
+#tabel tbody td:hover span {
+	color: blue;
+}
+
+#tabel tbody tr:hover img {
+	opacity: 1;
+}
+
+#tabel a, #tabel a:visited {
+	text-decoration: none;
+	color: blue;
+}
+
+#tabel a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+#tabel tbody tr:hover a {
+	color: red;
+}
