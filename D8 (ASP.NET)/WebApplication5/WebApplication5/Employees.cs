@@ -37,4 +37,15 @@ class EmployeeService
         E.Add(e);
     }
 
+    public static void Edit(Employee E, string name, int mgrid, double sal)
+    {
+        List<Employee> list = (List<Employee>)HttpContext.Current.Session["Employees"];
+        if (list.Contains(E))
+        {
+            list.Remove(E);
+            list.Add(new Employee(E.Id, name, list.Find(x => x.Id == mgrid),sal));
+            HttpContext.Current.Session["Employees"] = list;
+        }
+    }
+
 }

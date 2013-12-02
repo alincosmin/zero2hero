@@ -67,12 +67,21 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.Button saveBtn;
         
         /// <summary>
-        /// myLabel control.
+        /// myLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label myLabel;
+        protected global::System.Web.UI.WebControls.Label myLabel1;
+        
+        /// <summary>
+        /// myLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label myLabel2;
     }
 }

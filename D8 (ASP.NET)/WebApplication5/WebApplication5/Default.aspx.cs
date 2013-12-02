@@ -15,7 +15,13 @@ namespace WebApplication5
         {
             Employee X = (Employee) HttpContext.Current.Session["Target"];
             if (X != null)
-                EmployeeService.Add(X);
+            {
+                if (EmployeeService.GetAll().Find(y => y.Id == X.Id) != null)
+                    EmployeeService.Edit(X, X.Name, X.Manager.Id, X.Salary);
+                else
+                    EmployeeService.Add(X);
+                HttpContext.Current.Session["Target"] = null;
+            }
             
         }
 

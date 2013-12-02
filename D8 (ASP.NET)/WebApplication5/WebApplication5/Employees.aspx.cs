@@ -13,7 +13,7 @@ namespace WebApplication5
         protected void LoadEmployees()
         {
             ListItem x = new ListItem();
-            x.Value = "";
+            x.Value = "0";
             x.Text = "- is manager -";
             
             ddlMgr.DataTextField = "Name";
@@ -30,14 +30,15 @@ namespace WebApplication5
             saveBtn.Click += Save_Changes;
             txtName.Text = E.Name;
             txtSal.Text = E.Salary.ToString();
-            ddlMgr.Items.RemoveAt(EmployeeService.GetAll().IndexOf(E));
-
+            //ddlMgr.Items.RemoveAt(EmployeeService.GetAll().IndexOf(E)+1);
+            ddlMgr.SelectedValue = (E.Manager != null ? E.Manager.Id.ToString() : "");
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadEmployees();
             Employee X = (Employee)HttpContext.Current.Session["Target"];
+            HttpContext.Current.Session["Target"] = null;
             if (X != null)
             {
                 LoadEmployeesOnEdit(X);
@@ -48,7 +49,7 @@ namespace WebApplication5
         {
             string name = txtName.Text;
             int mgr = 0;
-            if (ddlMgr.SelectedValue != "")
+            if (ddlMgr.SelectedValue == "0")
                 mgr = Convert.ToInt32(ddlMgr.SelectedItem.Value);
             string pattern = @"0|([1-9]+[0-9]*)";
             double sal;
@@ -85,6 +86,14 @@ namespace WebApplication5
             Y.Manager = EmployeeService.GetAll().Find(x => x.Id == mgr);
             HttpContext.Current.Session["Target"] = Y;
             Response.Redirect("Default.aspx");
+        }
+
+        protected void Save_Click(object sender, EventArgs e)
+        {
+            if (HttpContext.Current.Session["Target"] == null)
+                Save_Emp(sender, e);
+            else
+                Save_Changes(sender, e);
         }
 
         protected void Cancel(object sender, EventArgs e)
