@@ -112,11 +112,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EMListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Employees.cs" />
-    <Compile Include="Models\EmployeesManagersListModel.cs" />
+    <Compile Include="Models\EmpManModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Views\EmployeesManagersList\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -149,6 +149,12 @@
       <Project>{3324b03f-31c8-4f17-843c-69a5b25f6300}</Project>
       <Name>StoreService</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EMList\New.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EMList\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

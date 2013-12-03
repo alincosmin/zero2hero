@@ -26,6 +26,12 @@ namespace StoreService
 
         public static void Add(Employee _emp)
         {
+            Random rnd = new Random();
+            while(EmpList.Find(x => x.Id == _emp.Id)!=null)
+            {
+                _emp.Id = rnd.Next(1, 100);
+            }
+            
             EmpList.Add(_emp);
         }
 
