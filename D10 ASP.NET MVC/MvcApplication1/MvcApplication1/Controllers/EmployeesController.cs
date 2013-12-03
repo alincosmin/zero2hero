@@ -14,27 +14,61 @@ namespace MvcApplication1.Controllers
         
         public ActionResult Insert()
         {
-            return View();
+            return View(new EmployeesModels());
         }
 
-        //[HttpPost]
-        //public ActionResult Insert(EmployeesModels employeeModel)
-        //{
-        //    EmployeesModels _emp = new EmployeesModels();
-        //    if (ModelState.IsValid)
-        //    {
-        //        _emp.Name = employeeModel.Name;
-        //        _emp.Salary = employeeModel.Salary;
-        //        EmployeesModels.Add(_emp);
-        //    }
-                
-        //    return View();
-        //}
+        [HttpPost]
+        public ActionResult Insert(EmployeesModels _emp)
+        {
+            if (ModelState.IsValid)
+            {
+                EmployeesModels.Add(_emp);
+                return RedirectToAction("View");
+            }
+            return View(_emp);
+        }
 
         public ActionResult View()
         {
             List<EmployeesModels> _list = EmployeesModels.GetAll();
             return View(_list);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            EmployeesModels _emp = EmployeesModels.GetAll().Find(x => x.Id == id);
+            if (_emp == null)
+                return HttpNotFound();
+            
+            return View(_emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EmployeesModels _emp)
+        {
+            if (ModelState.IsValid)
+            {
+                EmployeesModels.Edit(_emp);
+                return RedirectToAction("View");
+            }
+            return View(_emp);
+        }
+    
+        public ActionResult Delete(int id)
+        {
+            EmployeesModels _emp = EmployeesModels.GetAll().Find(x => x.Id == id);
+            if (_emp == null)
+                return HttpNotFound();
+            return View(_emp);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(EmployeesModels _employee)
+        {
+            if (_employee == null)
+                return View(_employee);
+            EmployeesModels.Remove(_employee.Id);
+            return RedirectToAction("View");
         }
     }
 }

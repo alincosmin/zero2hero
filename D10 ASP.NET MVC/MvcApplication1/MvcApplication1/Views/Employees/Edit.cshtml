@@ -11,6 +11,8 @@
     <fieldset>
         <legend>EmployeesModels</legend>
 
+        @Html.HiddenFor(model => model.Id)
+
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)
         </div>
@@ -28,7 +30,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Save" />
         </p>
     </fieldset>
 }

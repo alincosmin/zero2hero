@@ -34,8 +34,27 @@ namespace MvcApplication1.Models
 
         public static void Add(EmployeesModels _employee)
         {
-            List<EmployeesModels> _list = (List<EmployeesModels>)HttpContext.Current.Session["Employees"];
-            _list.Add(_employee);
+          List<EmployeesModels> _list = EmployeesModels.GetAll();
+          Random rnd = new Random();
+          int id = rnd.Next(1, 100);
+          while (_list.Find(x => x.Id == id) != null)
+              id = rnd.Next(1, 100);
+          _employee.Id = id;
+          _list.Add(_employee);
+          HttpContext.Current.Session["Employees"] = _list;
+        }
+
+        public static void Edit(EmployeesModels _employee)
+        {
+            EmployeesModels _emp = EmployeesModels.GetAll().Find(x => x.Id == _employee.Id);
+            _emp.Name = _employee.Name;
+            _emp.Salary = _employee.Salary;
+        }
+
+        public static void Remove(int id)
+        {
+            List<EmployeesModels> _list = EmployeesModels.GetAll();
+            _list.Remove(_list.Find(x => x.Id == id));
             HttpContext.Current.Session["Employees"] = _list;
         }
     }
