@@ -1,0 +1,7 @@
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\bin\Debug\StoreService.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\bin\Debug\StoreService.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\bin\Debug\EmployeesManagers.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\bin\Debug\EmployeesManagers.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\obj\Debug\StoreService.csprojResolveAssemblyReference.cache
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\obj\Debug\StoreService.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeesManagers\StoreService\obj\Debug\StoreService.pdb
