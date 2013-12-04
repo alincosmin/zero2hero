@@ -33,5 +33,10 @@ namespace EmployeesManagersMVC.Controllers
             return View(EMList.List);
         }
 
+        public ActionResult ListEmps(int id = 0)
+        {
+            return View(EList.List(id));
+        }
+
     }
 }
