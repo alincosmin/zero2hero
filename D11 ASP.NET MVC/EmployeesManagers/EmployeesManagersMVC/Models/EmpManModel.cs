@@ -42,6 +42,7 @@ namespace EmployeesManagersMVC.Models
                     _temp.Id = emp.Id;
                     _temp.Name = emp.Name;
                     _temp.Salary = emp.Salary;
+                    emp.Manager = new Employee();
                     _temp.ManagerId = emp.Manager.Id;
                     _temp.ManagerName = emp.Manager.Name;
                     _list.Add(_temp);
@@ -54,10 +55,6 @@ namespace EmployeesManagersMVC.Models
         public static void Add(EmpManModel _employee)
         {
             Employee E = new Employee();
-            Random rnd = new Random();
-            E.Id = rnd.Next(1, 100);
-            while (List.Find(x => x.Id == E.Id) != null)
-                E.Id = rnd.Next(1, 100);
             E.Name = _employee.Name;
             E.Salary = _employee.Salary;
             if (_employee.ManagerId > 0)
