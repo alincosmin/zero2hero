@@ -7,6 +7,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace StoreService
 {
@@ -14,16 +15,6 @@ namespace StoreService
     {
         public static List<Employee> EmpList
         {
-            //get
-            //{
-            //    List<Employee> _list = (List<Employee>)HttpContext.Current.Session["Employees"];
-            //    if (_list == null)
-            //    {
-            //        HttpContext.Current.Session["Employees"] = new List<Employee>();
-            //        _list = (List<Employee>)HttpContext.Current.Session["Employees"];
-            //    }
-            //    return _list;
-            //}
             get
             {
                 List<Employee> _list = new List<Employee>();
@@ -71,13 +62,15 @@ namespace StoreService
 
         public static void Add(Employee _emp)
         {
-            Random rnd = new Random();
-            _emp.Id = rnd.Next(1, 1000);
-            while (EmpList.Find(x => x.Id == _emp.Id) != null)
-            {
-                _emp.Id = rnd.Next(1, 1000);
-            }
-            EmpList.Add(_emp);
+            SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["EmpConnString"].ConnectionString);
+            conn.Open();
+            Match M = System.Text.RegularExpressions.Regex.Match(_emp.Name,"(.*?)\s(.*)");
+
+            string cmdstring = "INSERT INTO Employees(firstname,lastname,Salary,mgr) VALUES('"+M.Groups[0]+"','"+M.Groups[1]+"',"+Convert.ToInt32(_emp.Salary)+","+_emp.Manager.Id+")";
+            SqlCommand cmd = new SqlCommand(cmdstring, conn);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
 
         public static void Replace(Employee _new, Employee _old)
