@@ -38,5 +38,38 @@ namespace EmployeesManagersMVC.Controllers
             return View(EList.List(id));
         }
 
+        public ActionResult Edit(int id)
+        {
+            EmpManModel _emp = EMList.Find(id);
+            if (_emp == null)
+                return HttpNotFound();
+            return View(_emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(EmpManModel _emp)
+        {
+            if (ModelState.IsValid)
+            {
+                EMList.Update(_emp);
+                return RedirectToAction("List");
+            }
+            return View(_emp);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            EmpManModel _emp = EMList.Find(id);
+            if (_emp == null)
+                return HttpNotFound();
+            return View(_emp);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(EmpManModel _emp)
+        {
+            EMList.Delete(_emp.Id);
+            return RedirectToAction("List");
+        }
     }
 }

@@ -11,6 +11,8 @@
     <fieldset>
         <legend>EmpManModel</legend>
 
+        @Html.HiddenFor(model => model.Id)
+
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)
         </div>
@@ -26,11 +28,15 @@
             @Html.EditorFor(model => model.Salary)
             @Html.ValidationMessageFor(model => model.Salary)
         </div>
-
-        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ManagerName)
+        </div>
+        <div class="editor-field">
+            @Html.Action("ListEmps", new { id = Model.Id})
+        </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Save" />
         </p>
     </fieldset>
 }

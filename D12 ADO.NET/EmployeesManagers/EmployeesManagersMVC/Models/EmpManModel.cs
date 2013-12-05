@@ -30,6 +30,24 @@ namespace EmployeesManagersMVC.Models
 
     public class EMList
     {
+        public static EmpManModel Find(int id)
+        {
+            EmpManModel _temp = null;
+            Employee _temp2 = StoreService.Store.EmpList.Find(x => x.Id == id);
+            if (_temp2 != null)
+            {
+                _temp = new EmpManModel();
+                _temp.Id = _temp2.Id;
+                _temp.Name = _temp2.Name;
+                _temp.Salary = _temp2.Salary;
+                if (_temp2.Manager != null)
+                {
+                    _temp.ManagerId = _temp2.Manager.Id;
+                    _temp.ManagerName = _temp2.Manager.Name;
+                } 
+            }
+            return _temp;
+        }
         public static List<EmpManModel> List
         {
             get
@@ -62,6 +80,22 @@ namespace EmployeesManagersMVC.Models
             if (_employee.ManagerId > 0)
                 E.Manager = StoreService.Store.EmpList.Find(x => x.Id == _employee.ManagerId);
             StoreService.Store.Add(E);
+        }
+
+        public static void Update(EmpManModel _employee)
+        {
+            Employee E = new Employee();
+            E.Id = _employee.Id;
+            E.Name = _employee.Name;
+            E.Salary = _employee.Salary;
+            if (_employee.ManagerId > 0)
+                E.Manager = StoreService.Store.EmpList.Find(x => x.Id == _employee.ManagerId);
+            StoreService.Store.Update(E);
+        }
+
+        public static void Delete(int id)
+        {
+            StoreService.Store.Delete(id);
         }
     }
 

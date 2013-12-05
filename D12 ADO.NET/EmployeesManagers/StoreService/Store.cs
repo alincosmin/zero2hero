@@ -30,14 +30,10 @@ namespace StoreService
                 {
                     Employee _temp = new Employee();
                     _temp.Id = Convert.ToInt32(rdr["empid"]);
-                    _temp.Name = (string)rdr["name"];
-                    _temp.Salary = Convert.ToInt32(rdr["Salary"]);
+                    _temp.Name = (rdr["name"] != DBNull.Value)?(string)rdr["name"]:"";
+                    _temp.Salary = (rdr["Salary"] != DBNull.Value)?Convert.ToInt32(rdr["Salary"]):0;
                     _list.Add(_temp);
-                    if (rdr["mgr"] != DBNull.Value)
-                    {
-                        pair[_temp.Id] = Convert.ToInt32(rdr["mgr"]);
-                    }
-                    else pair[_temp.Id] = 0;
+                    pair[_temp.Id] = (rdr["mgr"] != DBNull.Value) ? Convert.ToInt32(rdr["mgr"]) : 0;
                 }
                 conn.Close();
                 i = 0;
@@ -64,25 +60,40 @@ namespace StoreService
         {
             SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["EmpConnString"].ConnectionString);
             conn.Open();
-            Match M = System.Text.RegularExpressions.Regex.Match(_emp.Name,"(.*?)\s(.*)");
-
-            string cmdstring = "INSERT INTO Employees(firstname,lastname,Salary,mgr) VALUES('"+M.Groups[0]+"','"+M.Groups[1]+"',"+Convert.ToInt32(_emp.Salary)+","+_emp.Manager.Id+")";
-            SqlCommand cmd = new SqlCommand(cmdstring, conn);
-            cmd.CommandType = CommandType.Text;
+            SqlCommand cmd = new SqlCommand("AddEmployee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@fn",_emp.Name));
+            cmd.Parameters.Add(new SqlParameter("@sal",Convert.ToInt32(_emp.Salary)));
+            if (_emp.Manager != null)
+                cmd.Parameters.Add(new SqlParameter("@mgr",_emp.Manager.Id));
             cmd.ExecuteNonQuery();
             conn.Close();
         }
 
-        public static void Replace(Employee _new, Employee _old)
+        public static void Update(Employee _emp)
         {
-            Employee _temp = EmpList.Find(x => x.Id == _old.Id);
-            if (_temp != null)
-            {
-                _temp.Manager = _new.Manager;
-                _temp.Name = _new.Name;
-                _temp.Salary = _new.Salary;
-                _temp.City = _new.City;
-            }
+            SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["EmpConnString"].ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("UpdateEmployee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@id", _emp.Id));
+            cmd.Parameters.Add(new SqlParameter("@name", _emp.Name));
+            cmd.Parameters.Add(new SqlParameter("@sal", Convert.ToInt32(_emp.Salary)));
+            if (_emp.Manager != null)
+                cmd.Parameters.Add(new SqlParameter("@mgr", _emp.Manager.Id));
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static void Delete(int id)
+        {
+            SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["EmpConnString"].ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("DeleteEmployee", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@id", id));
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }
