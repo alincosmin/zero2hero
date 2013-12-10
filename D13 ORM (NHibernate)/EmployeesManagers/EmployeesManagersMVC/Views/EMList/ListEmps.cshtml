@@ -1,0 +1,9 @@
+﻿@model IEnumerable<EmployeesManagersMVC.Models.EmployeeName>
+
+<select name="ManagerId" id="manager">
+    <option value="">- No manager -</option>
+    @foreach (var item in Model)
+    {
+        <option value="@(item.Id)">@(item.Name) (@(item.Id))</option>
+    }
+</select>
