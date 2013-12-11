@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/Highlighting/AnalysisEnabled/@EntryValue">SOLUTION</s:String>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
+  &lt;Assembly Path="C:\Users\AlinCosmin\documents\visual studio 2013\Projects\EmployeesManagers\packages\NHibernate.3.3.3.4001\lib\Net35\NHibernate.dll" /&gt;&#xD;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=843FA84572734271BC19EF640A991530/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=843FA84572734271BC19EF640A991530/Name/@EntryValue">EmployeesManagement</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=843FA84572734271BC19EF640A991530/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;Elements&gt;&lt;UnitTestElement Provider="nUnit" Id="EmployeesManagers.Tests.EmployeesManagement" type="NUnitTestFixtureElement" Project="27B2AF1D-7642-4342-A1B4-75EDD064B119" /&gt;&lt;UnitTestElement Provider="nUnit" Id="EmployeesManagers.Tests.EmployeesManagement.AddEmployee" ParentId="EmployeesManagers.Tests.EmployeesManagement" type="NUnitTestElement" TypeName="EmployeesManagers.Tests.EmployeesManagement" MethodName="AddEmployee" Project="27B2AF1D-7642-4342-A1B4-75EDD064B119" /&gt;&lt;/Elements&gt;&lt;/Session&gt;</s:String></wpf:ResourceDictionary>
