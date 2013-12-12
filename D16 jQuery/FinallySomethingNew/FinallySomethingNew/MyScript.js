@@ -6,7 +6,7 @@
         $("#tabelMoto").append("<tr><th>Brand</th><th>Model</th><th>Year</th><th>Image</th></tr>");
 
         for (var x = 0; x < motos.length; x++) {
-            $("#tabelMoto").append('<tr class="element"' +
+            $("#tabelMoto").append("<tr>" +
                 "<td>" + motos[x].Brand + "</td>" +
                 "<td>" + motos[x].Model + "</td>" +
                 "<td>" + motos[x].Year + "</td>" +
@@ -35,7 +35,7 @@
         var brand = $("#inputBrand").val();
         var model = $("#inputModel").val();
         var year = $("#inputYear").val();
-        var moto = { Brand: brand, Model: model, Year: year };
+        var moto = { Brand: brand, Model: model, Year: year, Image: '' };
         $.ajax({
             url: "/Motorcycles/Insert",
             type: "POST",
