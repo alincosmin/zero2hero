@@ -11,5 +11,8 @@
     <Setting Name="ConsoleTestWebService_localhost_Calculator" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:51430/Calculator.asmx</Value>
     </Setting>
+    <Setting Name="ConsoleTestWebService_localhost1_EmployeesWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:51430/EmployeesWebService.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

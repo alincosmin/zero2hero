@@ -52,5 +52,15 @@ namespace ConsoleTestWebService.Properties {
                 return ((string)(this["ConsoleTestWebService_localhost_Calculator"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51430/EmployeesWebService.asmx")]
+        public string ConsoleTestWebService_localhost1_EmployeesWebService {
+            get {
+                return ((string)(this["ConsoleTestWebService_localhost1_EmployeesWebService"]));
+            }
+        }
     }
 }

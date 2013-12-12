@@ -1,4 +1,6 @@
-﻿namespace EmployeesManagers
+﻿using System.Runtime.CompilerServices;
+
+namespace EmployeesManagers
 {
     public class Employee
     {

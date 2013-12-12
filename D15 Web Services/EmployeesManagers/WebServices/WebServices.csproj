@@ -58,11 +58,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calculator.asmx" />
+    <Content Include="EmployeesWebService.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.asmx.cs">
       <DependentUpon>Calculator.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmployeesWebService.asmx.cs">
+      <DependentUpon>EmployeesWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +79,20 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeesManagersMVC\EmployeesManagersMVC.csproj">
+      <Project>{0a9f0622-d672-46a5-8688-f3d48a2a2759}</Project>
+      <Name>EmployeesManagersMVC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeesManagers\EmployeesManagers.csproj">
+      <Project>{6c52c49e-2bd5-4671-9a5c-bcfaa759a7e9}</Project>
+      <Name>EmployeesManagers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StoreService\StoreService.csproj">
+      <Project>{3324b03f-31c8-4f17-843c-69a5b25f6300}</Project>
+      <Name>StoreService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
