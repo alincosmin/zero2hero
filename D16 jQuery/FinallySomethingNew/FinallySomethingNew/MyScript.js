@@ -2,18 +2,30 @@
     var motos;
 
     function populateTable() {
-        $("#tabelMoto").empty();
-        $("#tabelMoto").append("<tr><th>Brand</th><th>Model</th><th>Year</th><th>Image</th></tr>");
+        var tabel = $("#tabelMoto");
+        tabel.empty();
+        tabel.append("<tr><th>Brand</th><th>Model</th><th>Year</th><th>Image</th><th></th></tr>");
 
         for (var x = 0; x < motos.length; x++) {
-            $("#tabelMoto").append("<tr>" +
+            tabel.append("<tr data-brand=\"" + motos[x].Brand + "\" data-model=\"" + motos[x].Model + "\">" +
                 "<td>" + motos[x].Brand + "</td>" +
                 "<td>" + motos[x].Model + "</td>" +
                 "<td>" + motos[x].Year + "</td>" +
-                '<td><img alt="poza moto" src="' + motos[x].Image + '" />' +
+                "<td><img src=\"" + motos[x].Image + "\" /></td>" +
+                "<td><input type=\"button\" value=\"+\" class=\"buttonMore\" data-id=\"" + x + "\" /></td>" +
                 "</tr>");
         }
     }
+
+    $(document).on("click", ".buttonMore", function() {
+        var id = parseInt($(this).attr("data-id"));
+        var container = $("#motoInfo");
+        container.empty();
+        container.append("<p>Brand: " + motos[id].Brand + "</p>");
+        container.append("<p>Model: " + motos[id].Model + "</p>");
+        container.append("<p>Year: " + motos[id].Year + "</p>");
+        container.append("<p>Image: <img src=\"" + motos[id].Image + "\" /></p>");
+    });
 
     $("#listMotos").click(function() {
         $.ajax({
@@ -25,12 +37,12 @@
                 console.log(motos);
                 populateTable();
             },
-            error: function() {
-                alert("Nu s-a putut apela List()!");
+            error: function (jqXHR, exception) {
+                alert("Nu s-a putut apela List()\n!" + jqXHR + '\n' + exception);
             }
         });
     });
-    
+
     $("#insertMoto").click(function() {
         var brand = $("#inputBrand").val();
         var model = $("#inputModel").val();
@@ -52,6 +64,7 @@
             error: function(jqXHR, exception) {
                 alert("Nu s-a adaugat motocicleta!\n" + jqXHR + '\n' + exception);
             }
+        });
     });
-    })
+
 });

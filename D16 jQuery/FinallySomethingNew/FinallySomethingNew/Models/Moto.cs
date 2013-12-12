@@ -12,6 +12,24 @@ namespace FinallySomethingNew.Models
 
     public class MotoList
     {
-        public static List<Moto> List { get; set; }
+        private static List<Moto> mList { get; set; }
+
+        public static List<Moto> List()
+        {
+            if (mList == null)
+            {
+                mList = new List<Moto>();
+                return mList;
+            }
+
+            return mList;
+        }
+
+        public static void Add(Moto moto)
+        {
+            if (mList == null)
+                mList = new List<Moto>();
+            mList.Add(moto);
+        }
     }
 }

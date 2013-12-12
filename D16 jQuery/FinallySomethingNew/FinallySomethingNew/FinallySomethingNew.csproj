@@ -125,6 +125,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <None Include="Views\Motorcycles\Default.cshtml" />
     <Content Include="Global.asax" />
+    <Content Include="jquery.mixitup.min.js" />
     <Content Include="MyScript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

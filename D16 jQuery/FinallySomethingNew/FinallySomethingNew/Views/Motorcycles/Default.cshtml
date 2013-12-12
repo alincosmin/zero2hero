@@ -3,17 +3,23 @@
 <head>
     <title>Motorcycles</title>
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-    <script type="text/javascript" src="MyScript.js"></script>
+    <script type="text/javascript" src="/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="/MyScript.js"></script>
 </head>
 <body>
-   
-    <input type="button" id="listMotos" value="Listeaza motociclete" />
-    <table id="tabelMoto">
-    </table>
-    
-    <p>Brand: <input type="text" id="inputBrand" /></p>
-    <p>Model: <input type="text" id="inputModel" /></p>
-    <p>Year: <input type="text" id="inputYear" /></p>
-    <input type="button" id="insertMoto" value="Adauga motocicleta" />
+    <div style="float: left; margin: 50px">
+        <p>Brand: <input type="text" id="inputBrand" /></p>
+        <p>Model: <input type="text" id="inputModel" /></p>
+        <p>Year: <input type="text" id="inputYear" /></p>
+        <input type="button" id="insertMoto" value="Adauga motocicleta" />
+    </div>
+
+    <div style="float: left; margin: 50px">
+        <input type="button" id="listMotos" value="Listeaza motociclete" />
+        <table id="tabelMoto"></table>
+    </div>
+
+    <div id="motoInfo" style="float: left; margin: 50px">
+    </div>
 </body>
 </html>
