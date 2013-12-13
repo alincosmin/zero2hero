@@ -1,0 +1,4 @@
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Employee\bin\Debug\Employee.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Employee\bin\Debug\Employee.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Employee\obj\Debug\Employee.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Employee\obj\Debug\Employee.pdb

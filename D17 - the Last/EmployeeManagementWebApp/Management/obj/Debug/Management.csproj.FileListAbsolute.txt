@@ -1,0 +1,13 @@
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\Management.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\Management.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\Employee.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\Employee.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\obj\Debug\Management.csprojResolveAssemblyReference.cache
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\obj\Debug\Management.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\obj\Debug\Management.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\FluentNHibernate.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\Iesi.Collections.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\NHibernate.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\FluentNHibernate.xml
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\Iesi.Collections.xml
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\Management\bin\Debug\NHibernate.xml

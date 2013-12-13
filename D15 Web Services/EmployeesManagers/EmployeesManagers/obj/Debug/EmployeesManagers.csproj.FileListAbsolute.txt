@@ -1,0 +1,11 @@
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\EmployeesManagers.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\EmployeesManagers.pdb
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\FluentNHibernate.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\Iesi.Collections.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\NHibernate.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\FluentNHibernate.xml
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\Iesi.Collections.xml
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\bin\Debug\NHibernate.xml
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\obj\Debug\EmployeesManagers.csprojResolveAssemblyReference.cache
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\obj\Debug\EmployeesManagers.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\EmployeesManagers\obj\Debug\EmployeesManagers.pdb

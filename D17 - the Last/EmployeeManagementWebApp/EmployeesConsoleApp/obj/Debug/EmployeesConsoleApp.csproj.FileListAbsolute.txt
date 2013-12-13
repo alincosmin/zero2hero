@@ -1,0 +1,6 @@
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeesConsoleApp\bin\Debug\EmployeesConsoleApp.exe.config
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeesConsoleApp\bin\Debug\EmployeesConsoleApp.exe
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeesConsoleApp\bin\Debug\EmployeesConsoleApp.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeesConsoleApp\obj\Debug\EmployeesConsoleApp.csprojResolveAssemblyReference.cache
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeesConsoleApp\obj\Debug\EmployeesConsoleApp.exe
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeesConsoleApp\obj\Debug\EmployeesConsoleApp.pdb

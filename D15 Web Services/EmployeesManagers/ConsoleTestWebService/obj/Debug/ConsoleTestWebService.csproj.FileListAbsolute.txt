@@ -1,0 +1,5 @@
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\ConsoleTestWebService\bin\Debug\ConsoleTestWebService.exe.config
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\ConsoleTestWebService\bin\Debug\ConsoleTestWebService.exe
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\ConsoleTestWebService\bin\Debug\ConsoleTestWebService.pdb
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\ConsoleTestWebService\obj\Debug\ConsoleTestWebService.exe
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\ConsoleTestWebService\obj\Debug\ConsoleTestWebService.pdb

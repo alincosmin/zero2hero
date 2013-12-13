@@ -1,0 +1,13 @@
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\StoreService.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\StoreService.pdb
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\EmployeesManagers.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\FluentNHibernate.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\Iesi.Collections.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\NHibernate.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\EmployeesManagers.pdb
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\FluentNHibernate.xml
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\Iesi.Collections.xml
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\bin\Debug\NHibernate.xml
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\obj\Debug\StoreService.csprojResolveAssemblyReference.cache
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\obj\Debug\StoreService.dll
+C:\Users\AlinCosmin\Documents\TeamNet\Work\D15 Web Services\EmployeesManagers\StoreService\obj\Debug\StoreService.pdb

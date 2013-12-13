@@ -1,0 +1,16 @@
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\EmployeeWebServices.dll.config
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\EmployeeWebServices.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\EmployeeWebServices.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\Employee.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\Management.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\Employee.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\Management.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\obj\Debug\EmployeeWebServices.csprojResolveAssemblyReference.cache
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\obj\Debug\EmployeeWebServices.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\obj\Debug\EmployeeWebServices.pdb
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\FluentNHibernate.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\NHibernate.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\Iesi.Collections.dll
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\FluentNHibernate.xml
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\NHibernate.xml
+c:\users\alincosmin\documents\visual studio 2013\Projects\EmployeeManagementWebApp\EmployeeWebServices\bin\Iesi.Collections.xml
